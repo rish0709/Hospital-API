@@ -1,0 +1,8 @@
+<h2><%=employee.name%></h2>
+<h4>Pending Performance Reviews</h4>
+
+<ol>
+    <%=employee.pendingReviews.forEach((emp) => {%>
+    <li>emp<button onclick="location.href = '/api/employeeManagement/shareFeedback/<%=emp%>/<%=employee._id%>';">Share Feedback</button></li>
+    <%})%>
+</ol>

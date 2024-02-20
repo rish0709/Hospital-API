@@ -1,0 +1,13 @@
+<h1><%=adminName%></h1>
+<h3>Employees</h3>
+<button  onclick="location.href = '/api/employeeManagement/addEmployee';">Add New Employee</button>
+
+<%=employees.forEach((employee)=>{
+
+<h5><%=employee.name%></h5>
+
+<button onclick="location.href = '/api/employeeManagement/removeEmployee/<%=employee._id%>';">Remove</button>
+<button onclick="location.href = '/api/employeeManagement/renderUpdateEmployee/<%=employee._id%';">Update</button>
+<button onclick="location.href = '/api/employeeManagement/viewEmployee/<%=employee._id%';">View</button>
+<button onclick="location.href = '/api/employeeManagement/assignReview/<%=employee._id%';">assign any Review</button>
+<%})%>
